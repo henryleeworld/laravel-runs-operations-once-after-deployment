@@ -1,4 +1,4 @@
-# Laravel 11 部署後一次性執行作業
+# Laravel 12 部署後一次性執行作業
 
 引入 timokoerber 的 laravel-one-time-operations 套件來擴增部署後一次性執行作業，就像資料庫遷移所做的一樣。
 
@@ -20,6 +20,10 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行 __Artisan__ 指令的 __queue:work__ 來處理被推送進隊列內的新任務。
+```sh
+$ php artisan queue:work
+```
 - 執行 __Artisan__ 指令的 __operations:process__ 來執行所有未完成的執行作業。
 ```sh
 $ php artisan operations:process
@@ -28,5 +32,5 @@ $ php artisan operations:process
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/S4ZIctE.png)
+![](https://i.imgur.com/5J4LonA.png)
 > 執行所有未完成的執行作業
